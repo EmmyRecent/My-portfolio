@@ -12,7 +12,7 @@ const Nav = () => {
   };
 
   return (
-    <header className="z-50 py-4">
+    <header className="sticky top-0 z-50 py-4">
       <nav className="wrapper relative flex items-center justify-between">
         {/* Logo */}
         <div>
@@ -22,6 +22,7 @@ const Nav = () => {
         {/* Nav links */}
         <div
           className={`fixed left-0 right-0 ${isExpanded ? "top-0" : "top-[-500px]"} z-50 w-full bg-primaryColor py-24 duration-300 lg:static lg:ml-auto lg:block lg:w-auto lg:bg-transparent lg:py-0`}
+          aria-expanded={isExpanded}
         >
           <ul className="flex flex-col items-center gap-5 text-center lg:flex-row lg:gap-8">
             {navLinks.map((link) => (

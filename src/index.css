@@ -21,9 +21,9 @@
   }
 
   section {
-    @apply py-6 md:pb-20 md:pt-28;
+    @apply min-h-screen py-6 md:pb-20 md:pt-28;
   }
-}
+} 
 
 @layer components {
   .wrapper {
@@ -53,5 +53,27 @@
 
   .btn:hover::before {
     @apply origin-left scale-x-100;
+  }
+
+  .btn_outline {
+    @apply rounded-full border border-primaryColorLight px-9 py-4 text-primaryColorLight transition-all duration-300 ease-in-out hover:bg-primaryColorLight hover:text-primaryColor;
+  }
+
+  .title {
+    @apply inline-block bg-gradient-to-r from-primaryColorLight to-primaryColor bg-clip-text pb-2 text-4xl font-bold text-transparent dark:to-whiteColor lg:text-6xl xl:text-[65px];
+  }
+}
+
+@layer utilities {
+  .social_icon {
+    @apply relative grid h-10 w-10 cursor-pointer place-content-center rounded-full border border-primaryColorLight text-primaryColorLight duration-300 hover:text-whiteColor;
+  }
+
+  .social_icon::before {
+    @apply absolute inset-0 h-full w-full scale-0 rounded-full bg-primaryColorLight transition-transform duration-300 ease-in-out content-[""];
+  }
+
+  .social_icon:hover::before {
+    @apply origin-center scale-100;
   }
 }
