@@ -21,7 +21,7 @@
   }
 
   section {
-    @apply min-h-screen py-6 md:pb-20 md:pt-28;
+    @apply py-6 md:pb-20 md:pt-28;
   }
 }
 
@@ -118,5 +118,14 @@
 
   .work_card:hover div i {
     @apply -rotate-90;
+  }
+
+  /* My skills */
+  .skills_card img {
+    @apply duration-300;
+  }
+
+  .skills_card:hover img {
+    @apply scale-110;
   }
 }

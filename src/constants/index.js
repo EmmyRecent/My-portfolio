@@ -13,6 +13,8 @@ import {
   qr,
 } from "../assets/images";
 
+import { figma, js, react, sketch, wp, xd } from "../assets/icons";
+
 export const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
@@ -110,5 +112,32 @@ export const projects = [
     description:
       "A News Landing page from Font-end mentor challenge, styled with SCSS",
     imgURL: news,
+  },
+];
+
+export const skills = [
+  {
+    label: "Figma",
+    iconURL: figma,
+  },
+  {
+    label: "JavaScript",
+    iconURL: js,
+  },
+  {
+    label: "React",
+    iconURL: react,
+  },
+  {
+    label: "Sketch",
+    iconURL: sketch,
+  },
+  {
+    label: "XD",
+    iconURL: xd,
+  },
+  {
+    label: "WordPress",
+    iconURL: wp,
   },
 ];
