@@ -102,4 +102,21 @@
   .service_item:hover div i {
     @apply -rotate-90 text-whiteColor;
   }
+
+  /* My projects */
+  .work_card > div {
+    @apply duration-300;
+  }
+
+  .work_card:hover > div {
+    @apply bottom-0;
+  }
+
+  .work_card div i {
+    @apply delay-300 duration-300;
+  }
+
+  .work_card:hover div i {
+    @apply -rotate-90;
+  }
 }

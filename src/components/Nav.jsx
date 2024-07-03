@@ -21,7 +21,7 @@ const Nav = () => {
 
         {/* Nav links */}
         <div
-          className={`fixed left-0 right-0 ${isExpanded ? "top-0" : "top-[-500px]"} z-50 w-full bg-primaryColor py-24 duration-300 lg:static lg:ml-auto lg:block lg:w-auto lg:bg-transparent lg:py-0`}
+          className={`fixed left-0 right-0 ${isExpanded ? "top-0" : "top-[-100%]"} z-50 w-full bg-primaryColor py-24 duration-500 lg:static lg:ml-auto lg:block lg:w-auto lg:bg-transparent lg:py-0`}
           aria-expanded={isExpanded}
         >
           <ul className="flex flex-col items-center gap-5 text-center lg:flex-row lg:gap-8">

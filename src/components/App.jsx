@@ -1,20 +1,14 @@
-import Nav from "./Nav";
-import Hero from "../sections/Hero";
-import Services from "../sections/Services";
-import Projects from "../sections/Projects";
+import { Nav, Hero, Services, Projects } from "../sections";
 
-const App = () => {
-  return (
-    <>
-      <Nav />
+const App = () => (
+  <>
+    <Nav />
 
-      <main>
-        <Hero />
-        <Services />
-        {/* <Projects /> */}
-      </main>
-    </>
-  );
-};
-
+    <main>
+      <Hero />
+      <Services />
+      <Projects />
+    </main>
+  </>
+);
 export default App;

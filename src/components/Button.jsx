@@ -1,6 +1,13 @@
-const Button = ({ label }) => {
+const Button = ({ label, onLoad }) => {
   return (
-    <button className="btn lg:ml-8">
+    <button
+      className="btn lg:ml-8"
+      onClick={() => {
+        {
+          onLoad && onLoad();
+        }
+      }}
+    >
       <span className="z-10">{label}</span>
     </button>
   );
