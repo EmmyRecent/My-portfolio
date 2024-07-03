@@ -2,7 +2,7 @@ import { person } from "../assets/images";
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative py-5">
+    <section id="home" className="relative py-5">
       {/* blob */}
       <div className="absolute right-0 top-[-20%] h-80 w-80 rounded-full bg-primaryColorLight opacity-50 mix-blend-screen blur-[150px]"></div>
 
