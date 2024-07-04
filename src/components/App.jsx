@@ -1,4 +1,5 @@
 import { Nav, Hero, Services, Projects, Skills, Contact } from "../sections";
+import Footer from "../components/Footer";
 
 const App = () => (
   <>
@@ -11,6 +12,8 @@ const App = () => (
       <Skills />
       <Contact />
     </main>
+
+    <Footer />
   </>
 );
 export default App;
