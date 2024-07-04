@@ -1,14 +1,21 @@
 import { useEffect, useState } from "react";
 import { Nav, Hero, Services, Projects, Skills, Contact } from "../sections";
-import Footer from "../components/Footer";
+import Footer from "./Footer";
 import ScrollUp from "./ScrollUp";
+import Overlay from "./Overlay";
 
 const App = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [expanded, setExpanded] = useState("");
 
   // Tracks the scroll position
   const handleScroll = () => {
     setScrollY(window.scrollY);
+  };
+
+  // This function gets data from the child component.
+  const getExpanded = (data) => {
+    setExpanded(data);
   };
 
   useEffect(() => {
@@ -21,7 +28,9 @@ const App = () => {
 
   return (
     <>
-      <Nav scrollY={scrollY} />
+      <Nav scrollY={scrollY} onExpanded={getExpanded} />
+
+      <Overlay onExpand={expanded} />
 
       <main>
         <Hero />

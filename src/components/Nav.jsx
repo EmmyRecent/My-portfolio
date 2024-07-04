@@ -1,15 +1,27 @@
 import useTheme from "../hooks/useTheme";
 import { navLinks } from "../constants";
 import Button from "./Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const Nav = ({ scrollY }) => {
+const Nav = ({ scrollY, onExpanded }) => {
   const { theme, toggleTheme } = useTheme();
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleClick = () => {
     setIsExpanded((prevValue) => !prevValue);
+    onExpanded(!isExpanded); // Lifting the state up.
   };
+
+  // Handles scroll on the body when navbar is open or closed.
+  useEffect(() => {
+    const body = document.querySelector("body");
+
+    if (isExpanded) {
+      body.classList.add("overflow-y-hidden");
+    } else {
+      body.classList.remove("overflow-y-hidden");
+    }
+  }, [isExpanded]);
 
   return (
     <header
@@ -30,7 +42,7 @@ const Nav = ({ scrollY }) => {
         >
           <ul className="flex flex-col items-center gap-8 text-center lg:flex-row">
             {navLinks.map((link) => (
-              <li key={link.label}>
+              <li key={link.label} onClick={handleClick}>
                 <a
                   className={`nav-link ${scrollY >= 200 && "text-textColor"}`}
                   href={link.href}
