@@ -3,7 +3,7 @@ import { contact } from "../constants";
 
 const Contact = () => {
   return (
-    <section>
+    <section id="#contact">
       <div className="wrapper">
         <div className="flex flex-col gap-16 md:flex-row-reverse md:items-center md:gap-5">
           {/* Content */}

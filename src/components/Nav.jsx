@@ -87,7 +87,7 @@ const Nav = ({ scrollY, onExpanded }) => {
             ))}
 
             <li>
-              <Button label={"Contact Me"} />
+              <Button label={"Contact Me"} href="#contact" />
             </li>
           </ul>
         </div>
