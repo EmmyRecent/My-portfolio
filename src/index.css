@@ -23,6 +23,22 @@
   section {
     @apply py-6 md:pb-20 md:pt-28;
   }
+
+  textarea {
+    @apply resize-none;
+  }
+
+  input,
+  textarea {
+    @apply w-full rounded-lg border border-gray-800 px-4 py-3 dark:bg-darkBodyColor;
+  }
+
+  input:focus,
+  input:active,
+  textarea:focus,
+  textarea:active {
+    @apply border-primaryColorLight outline-none;
+  }
 }
 
 @layer components {

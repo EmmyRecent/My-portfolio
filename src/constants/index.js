@@ -141,3 +141,12 @@ export const skills = [
     iconURL: wp,
   },
 ];
+
+export const contact = [
+  { label: "Phone", medium: "+44 7760691274", iconClass: "fa-solid fa-phone" },
+  {
+    label: "Email",
+    medium: "chukwuemekaeziagulu@gmail.com",
+    iconClass: "fa-regular fa-envelope",
+  },
+];

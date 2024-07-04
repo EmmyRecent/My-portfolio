@@ -1,4 +1,4 @@
-import { Nav, Hero, Services, Projects, Skills } from "../sections";
+import { Nav, Hero, Services, Projects, Skills, Contact } from "../sections";
 
 const App = () => (
   <>
@@ -9,6 +9,7 @@ const App = () => (
       <Services />
       <Projects />
       <Skills />
+      <Contact />
     </main>
   </>
 );
