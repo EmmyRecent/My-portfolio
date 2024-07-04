@@ -8,8 +8,10 @@ const Nav = ({ scrollY, onExpanded }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleClick = () => {
-    setIsExpanded((prevValue) => !prevValue);
-    onExpanded(!isExpanded); // Lifting the state up.
+    if (window.innerWidth < 976) {
+      setIsExpanded((prevValue) => !prevValue);
+      onExpanded(!isExpanded); // Lifting the state up.
+    }
   };
 
   // Handles scroll on the body when navbar is open or closed.
