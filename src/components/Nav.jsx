@@ -3,7 +3,7 @@ import { navLinks } from "../constants";
 import Button from "./Button";
 import { useState } from "react";
 
-const Nav = () => {
+const Nav = ({ scrollY }) => {
   const { theme, toggleTheme } = useTheme();
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -12,8 +12,12 @@ const Nav = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 py-4">
-      <nav className="wrapper relative flex items-center justify-between">
+    <header
+      className={`sticky top-0 z-50 py-4 ${scrollY >= 200 && "bg-primaryColor"}`}
+    >
+      <nav
+        className={`wrapper relative flex items-center justify-between ${scrollY >= 200 && "text-textColor"}`}
+      >
         {/* Logo */}
         <div>
           <h1>Logo.</h1>
@@ -27,7 +31,10 @@ const Nav = () => {
           <ul className="flex flex-col items-center gap-8 text-center lg:flex-row">
             {navLinks.map((link) => (
               <li key={link.label}>
-                <a className="nav-link" href={link.href}>
+                <a
+                  className={`nav-link ${scrollY >= 200 && "text-textColor"}`}
+                  href={link.href}
+                >
                   {link.label}
                 </a>
               </li>
@@ -40,7 +47,9 @@ const Nav = () => {
         </div>
 
         {/* Hamburger */}
-        <div className="flex items-center gap-5">
+        <div
+          className={`flex items-center gap-5 ${scrollY >= 200 && "text-textColor"}`}
+        >
           <div onClick={toggleTheme}>
             {theme === "light" ? (
               <i className="ri-moon-line ml-4 cursor-pointer text-2xl"></i>
@@ -52,7 +61,7 @@ const Nav = () => {
           <div id="hamburger" className="z-[100]" onClick={handleClick}>
             {isExpanded ? (
               <i
-                className={`ri-close-line text-2xl ${isExpanded && "text-whiteColor"} lg:hidden`}
+                className={`ri-close-line text-2xl ${isExpanded && "text-textColor"} lg:hidden`}
               ></i>
             ) : (
               <i className="ri-menu-2-line text-2xl lg:hidden"></i>
