@@ -3,6 +3,7 @@ import { Nav, Hero, Services, Projects, Skills, Contact } from "../sections";
 import Footer from "./Footer";
 import ScrollUp from "./ScrollUp";
 import Overlay from "./Overlay";
+import ScrollAnimation from "../animations/ScrollAnimation";
 
 const App = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -28,6 +29,7 @@ const App = () => {
 
   return (
     <>
+      <ScrollAnimation />
       <Nav scrollY={scrollY} onExpanded={getExpanded} />
 
       <Overlay onExpand={expanded} />

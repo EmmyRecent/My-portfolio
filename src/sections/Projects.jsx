@@ -14,11 +14,11 @@ const Projects = () => {
   return (
     <section id="projects">
       <div className="wrapper">
-        <div className="flex flex-col items-center gap-5 text-center">
+        <div className="recent_works_top flex flex-col items-center gap-5 text-center">
           <h2 className="subtitle capitalize">My Projects</h2>
           <p className="max-w-2xl">
-            We transform your ideas and desires into a distinctive web project
-            that inspires both you and your customers.
+            Here are some of the web projects I&apos;ve built, showcasing my
+            ability to transform ideas into impactful digital experiences.
           </p>
         </div>
 

@@ -1,6 +1,11 @@
-const ProjectList = ({ label, description, imgURL }) => {
+const ProjectList = ({ label, description, imgURL, link }) => {
   return (
-    <li className="work_card relative cursor-pointer overflow-hidden rounded-2xl border border-transparent bg-sectionColor p-5 duration-300 hover:border-primaryColor dark:bg-darkSectionColor lg:p-8">
+    <li
+      onClick={() => {
+        window.location.href = link;
+      }}
+      className="work_card relative cursor-pointer overflow-hidden rounded-2xl border border-transparent bg-sectionColor p-5 duration-300 hover:border-primaryColor dark:bg-darkSectionColor lg:p-8"
+    >
       <img src={imgURL} alt="Recent projects" className="w-full" />
 
       <div className="absolute bottom-[-100%] left-0 right-0 p-5 lg:p-8">

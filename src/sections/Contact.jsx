@@ -7,18 +7,21 @@ const Contact = () => {
       <div className="wrapper">
         <div className="flex flex-col gap-16 md:flex-row-reverse md:items-center md:gap-5">
           {/* Content */}
-          <div className="flex-1 space-y-7 md:space-y-10 lg:pl-20 xl:pl-40">
+          <div className="contact_form flex-1 space-y-7 md:space-y-10 lg:pl-20 xl:pl-40">
             {contact.map((i, index) => (
-              <div key={index} className="flex items-start gap-4">
+              <div key={index} className="contact_item flex items-start gap-4">
                 <div className="grid h-10 w-10 place-content-center rounded-full bg-gradient-to-b from-primaryColor to-primaryColorLight text-whiteColor lg:h-14 lg:w-14">
                   <i className={i.iconClass}></i>
                 </div>
 
                 <div className="space-y-1">
                   <p className="text-sm">{i.label}</p>
-                  <p className="cursor-pointer font-bold duration-300 hover:text-primaryColorLight">
+                  <a
+                    href={`${i.label === "Phone" ? "tel" : "mailto"}:${i.medium}`}
+                    className="cursor-pointer font-bold duration-300 hover:text-primaryColorLight"
+                  >
                     {i.medium}
-                  </p>
+                  </a>
                 </div>
               </div>
             ))}

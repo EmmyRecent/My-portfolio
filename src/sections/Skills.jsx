@@ -5,11 +5,10 @@ const Skills = () => {
   return (
     <section id="skills" className="bg-sectionColor dark:bg-darkSectionColor">
       <div className="wrapper">
-        <div className="flex flex-col items-center gap-5 text-center">
+        <div className="skills_top flex flex-col items-center gap-5 text-center">
           <h2 className="subtitle capitalize">My Skills</h2>
           <p className="max-w-2xl">
-            We transform your ideas and desires into a distinctive web project
-            that inspires both you and your customers.
+            A showcase of my expertise and capabilities in web development
           </p>
         </div>
 

@@ -66,7 +66,11 @@ const Nav = ({ scrollY, onExpanded }) => {
       >
         {/* Logo */}
         <div>
-          <h1>Logo.</h1>
+          <a className="cursor-pointer text-4xl font-semibold" href="#">
+            {"<"}
+            <span className="text-primaryColorLight">{"/"}</span>
+            {">"}
+          </a>
         </div>
 
         {/* Nav links */}

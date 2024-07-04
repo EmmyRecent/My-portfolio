@@ -1,5 +1,3 @@
-import person from "./person.jpg";
-
 import calculator from "./calculator.jpg";
 import career from "./Career Dev Registration Form.png";
 import gcls from "./gcls.jpg";
@@ -12,9 +10,10 @@ import nike from "./Nike.jpg";
 import todo from "./To-Do list app.png";
 import toDo from "./todo.jpg";
 import qr from "./QR code generator.png";
+import cv from "./Chukwuemeka's CV.pdf";
+import profile from "./Profile.jpg";
 
 export {
-  person,
   calculator,
   career,
   gcls,
@@ -27,4 +26,6 @@ export {
   todo,
   toDo,
   qr,
+  cv,
+  profile,
 };

@@ -49,68 +49,80 @@ export const projects = [
     description:
       "My minimalistic style portfolio you are viewing right now, based on a Figma design.",
     imgURL: portfolio,
+    link: "https://chukwuemeka-e.vercel.app/",
   },
   {
     label: "Movie Browser",
     description:
       "Movie Browser is a comprehensive web application designed to make your movie discovery experience seamless. built using create-react-app",
     imgURL: movie,
+    link: "https://movie-browser-mb.vercel.app/",
   },
   {
     label: "Keeper",
     description:
       "Keeper is a note taking web application, keeper allows you to write down your thoughts and so much more...",
     imgURL: keeper,
+    link: "https://keeper-eight-mu.vercel.app/",
   },
   {
     label: "Nike",
     description:
       "A Nike web app landing page built with React and Tailwind css",
     imgURL: nike,
+    link: "https://nike-gold-tau.vercel.app/",
   },
   {
     label: "To Do List App",
     description: "To Do list app, you can create tasks and organize your day",
     imgURL: todo,
+    link: "https://to-do-list-app-v.vercel.app/",
   },
   {
     label: "Career Dev",
     description:
       "career dev registration form is a form for Registration to a RCCG youth career development program",
     imgURL: career,
+    link: "https://careerdev-registration-form.vercel.app/",
   },
   {
     label: "Grace Lydia Care Services",
     description:
       "Grace Lydia care services is a care agency that provides care services to young people and adults.",
     imgURL: gcls,
+    link: "https://gracelydia-care-services.vercel.app/",
   },
   {
     label: "QR code generator",
     description:
       "With Qr code scanner can generate Qr codes for any text or link",
     imgURL: qr,
+    link: "https://qrcode-generator-q.netlify.app/",
   },
   {
     label: "Todo",
     description: "A Todo web application built with React and Tailwind css",
     imgURL: toDo,
+    link: "https://todo-lime-one.vercel.app/",
   },
   {
     label: "Hot Beans Web",
     description: "A place to find tech jobs. Built with Express and Node JS",
     imgURL: hotBeans,
+    link: "https://hot-beans-web-beta.vercel.app/",
   },
   {
     label: "Calculator",
     description: "A Calculator web app, Built with vanilla javaScript",
     imgURL: calculator,
+    link: "https://calculator-app-emmyrecent.vercel.app/",
   },
   {
     label: "News",
     description:
       "A News Landing page from Font-end mentor challenge, styled with SCSS",
     imgURL: news,
+    link: "https://news-blond-tau.vercel.app/",
   },
 ];
 

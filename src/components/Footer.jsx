@@ -8,7 +8,11 @@ const Footer = () => {
     <footer className="bg-sectionColor py-10 dark:bg-darkSectionColor">
       <div className="wrapper flex flex-col items-center gap-5">
         <div className="py-5">
-          <h1>Logo</h1>
+          <a className="cursor-pointer text-4xl font-semibold" href="#">
+            {"<"}
+            <span className="text-primaryColorLight">{"/"}</span>
+            {">"}
+          </a>
         </div>
 
         <div>
@@ -26,7 +30,9 @@ const Footer = () => {
         <div className="text-primaryColorLight">
           <p>
             &copy; {year} All rights reserved by{" "}
-            <span className="font-bold">Chukwuemeka</span>
+            <a className="font-bold" href="https://chukwuemeka-e.vercel.app">
+              Chukwuemeka
+            </a>
           </p>
         </div>
       </div>
