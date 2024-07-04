@@ -25,6 +25,38 @@ const Nav = ({ scrollY, onExpanded }) => {
     }
   }, [isExpanded]);
 
+  // Handles the active links on each section
+  useEffect(() => {
+    const activeLink = () => {
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      let current = "hero";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+
+        if (window.scrollY >= sectionTop - 60) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((item) => {
+        item.classList.remove("active");
+
+        if (item.href.includes(current)) {
+          item.classList.add("active");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", activeLink);
+
+    return () => {
+      window.removeEventListener("scroll", activeLink);
+    };
+  }, []);
+
   return (
     <header
       className={`sticky top-0 z-50 py-4 ${scrollY >= 200 && "bg-primaryColor"}`}
