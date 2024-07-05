@@ -8,8 +8,8 @@ const Services = () => {
         <div className="service_top flex flex-col items-center gap-5 text-center">
           <h2 className="subtitle capitalize">My quality services</h2>
           <p className="max-w-2xl">
-            We bring your ideas and desires to life with unique web projects
-            that captivate and inspire both you and your customers.
+            I bring your ideas and desires to life with unique web projects that
+            captivate and inspire both you and your customers.
           </p>
         </div>
 

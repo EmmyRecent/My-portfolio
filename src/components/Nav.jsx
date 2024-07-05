@@ -8,9 +8,12 @@ const Nav = ({ scrollY, onExpanded }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleClick = () => {
+    console.log("handle click trigged");
+
     if (window.innerWidth < 976) {
       setIsExpanded((prevValue) => !prevValue);
       onExpanded(!isExpanded); // Lifting the state up.
+      console.log("I was clicked");
     }
   };
 
@@ -91,7 +94,14 @@ const Nav = ({ scrollY, onExpanded }) => {
             ))}
 
             <li>
-              <Button label={"Contact Me"} href="#contact" />
+              <Button
+                label="Contact Me"
+                Click={handleClick}
+                isExpanded={isExpanded}
+                setIsExpanded={setIsExpanded}
+                onExpanded={onExpanded}
+                href="#contact"
+              />
             </li>
           </ul>
         </div>
