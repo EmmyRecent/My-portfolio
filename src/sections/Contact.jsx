@@ -28,7 +28,11 @@ const Contact = () => {
           </div>
 
           {/* Contact form */}
-          <form className="flex-1 space-y-3 rounded-xl border border-primaryColor bg-sectionColor px-5 py-10 dark:bg-darkSectionColor">
+          <form
+            action="#"
+            name="submit-to-google-sheet"
+            className="flex-1 space-y-3 rounded-xl border border-primaryColor bg-sectionColor px-5 py-10 dark:bg-darkSectionColor"
+          >
             {/* Subtitle and description */}
             <div className="flex flex-col">
               <h2 className="subtitle capitalize">Lets Work together!</h2>

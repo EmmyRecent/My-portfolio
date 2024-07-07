@@ -1,7 +1,7 @@
 const Button = ({
   label,
   onLoad,
-  type,
+  onFormSubmit,
   href,
   click,
   isExpanded,
@@ -11,28 +11,29 @@ const Button = ({
   const section = document.getElementById(href);
 
   const handleButtonClick = (e) => {
-    {
-      onLoad && onLoad();
+    if (onLoad) {
+      onLoad();
     }
-    {
-      type && e.preventDefault();
+    if (onFormSubmit) {
+      onFormSubmit(e);
     }
-    {
-      section && section.scrollIntoView({ behavior: "smooth" });
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
     }
-    {
-      click && click();
+    if (click) {
+      click();
     }
-    {
-      typeof setIsExpanded === "function" &&
-        setIsExpanded((prevValue) => !prevValue),
+    if (typeof setIsExpanded === "function") {
+      setIsExpanded((prevValue) => !prevValue);
+      if (onExpanded) {
         onExpanded(!isExpanded);
+      }
     }
   };
 
   return (
     <button
-      className={`btn ${type ? "lg:ml-0" : "lg:ml-8"}`}
+      className={`btn ${onFormSubmit ? "lg:ml-0" : "lg:ml-8"}`}
       onClick={handleButtonClick}
     >
       <span className="z-10">{label}</span>

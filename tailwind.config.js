@@ -28,10 +28,29 @@ export default {
             transform: "scale(1.1)",
           },
         },
+
+        shake: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "25%": {
+            transform: "translateX(-2px)",
+          },
+          "50%": {
+            transform: "translateX(0)",
+          },
+          "75% ": {
+            transform: "translateX(2px)",
+          },
+          "100%": {
+            transform: "translateX(0)",
+          },
+        },
       },
 
       animation: {
         scaleAnimation: "move 3s linear infinite",
+        shakeAnimation: "shake 0.1s linear 10",
       },
     },
 
