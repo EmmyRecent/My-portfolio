@@ -1,6 +1,6 @@
 import calculator from "./calculator.jpg";
 import career from "./Career Dev Registration Form.png";
-import gcls from "./gcls.jpg";
+import gcls from "./gcls.png";
 import hotBeans from "./hot beans web.jpg";
 import keeper from "./keeper-app.jpg";
 import movie from "./movieBrowser.jpg";
@@ -10,7 +10,7 @@ import nike from "./Nike.jpg";
 import todo from "./To-Do list app.png";
 import toDo from "./todo.jpg";
 import qr from "./QR code generator.png";
-import cv from "./Chukwuemeka's CV.pdf";
+import cv from "./Chukwuemeka's CV.pdf"; // CV
 import profile from "./Profile.jpg";
 
 export {
